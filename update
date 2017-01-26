@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Untitled Document</title>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+<!--
+    <script src="script.js">
+        alert("hello js-1");
+    </script>
+-->
+</head>
+<body>
+<!--    <div id="answerContainer" style="border: 1px solid red; width: 100px; height: 30px; line-height: 30px;"></div>-->
+    <div id="answerContainer"></div>
+    <input type="button" value="啟動" onClick="someFunction()">
+    
+    <script>
+        function someFunction(){            
+            d3
+            .select("#answerContainer")
+            .text(generateRandomNumber(1911, 2016));
+        }
+        
+        function generateRandomNumber(lowerLimit, UpperLimit) {
+            var randomNumber = Math.random()*(UpperLimit-lowerLimit) + lowerLimit;
+            var randomInteger = Math.round(randomNumber);
+            
+            return randomInteger;
+        }
+    </script>
+</body>
+    
+<style>
+    #answerContainer {
+        border: 1px solid red; 
+        width: 100px; 
+        height: 30px; 
+        line-height: 30px;
+    }
+</style>
+</html>
+
+
+<script>
+    // 1. make a button
+    // 2. the button is clickable
+    // 3. after click, it has to call some function
+    // 4. the page will show a number
+    // 5. the number should be random
+    // 6. the number should 1911~2016
+    // 7. the number shoudl be an integer
+</script>
